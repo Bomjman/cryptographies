@@ -1,0 +1,11 @@
+<script type="text/javascript">
+   setTimeout(function(){
+   window.location.reload(1);
+}, 60000);
+</script>
+
+
+<h1>profit_eth=<%= @p %></h1>
+<h1>profit_etc=<%= @f %></h1>
+
+<%= area_chart [{ name: 'eth', data: @eths.map {|el| [el.created_at, el.profit]}}, { name: 'etclassic', data: @etclassics.map {|el| [el.created_at, el.profit]}}], refresh: 60, label: "eth", legend: true %>
