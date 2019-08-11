@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_08_09_103735) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "etclassics", force: :cascade do |t|
     t.float "profit"
     t.datetime "created_at", null: false

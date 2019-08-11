@@ -16487,3 +16487,387 @@ Processing by EtclassicsController#index as HTML
 Completed 200 OK in 6423ms (Views: 1344.0ms | ActiveRecord: 263.6ms)
 
 
+Started GET "/" for ::1 at 2019-08-10 19:38:41 +0300
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+):
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (3898.3ms)[0m  [1m[35mCREATE DATABASE "my_database_development" ENCODING = 'utf8'[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (1712.0ms)[0m  [1m[35mCREATE DATABASE "my_database_test" ENCODING = 'utf8'[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (145.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (92.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+Migrating to CreateEths (20190802124453)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (63.7ms)[0m  [1m[35mCREATE TABLE "eths" ("id" bigserial primary key, "profit" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190802124453_create_eths.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (6.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190802124453"]]
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+Migrating to CreateEtclassics (20190809103735)
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (32.4ms)[0m  [1m[35mCREATE TABLE "etclassics" ("id" bigserial primary key, "profit" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190809103735_create_etclassics.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190809103735"]]
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-11 10:50:38.306743"], ["updated_at", "2019-08-11 10:50:38.306743"]]
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (78.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/bin/rake:23
+Started GET "/" for ::1 at 2019-08-11 13:54:27 +0300
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/daiel/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (2.4ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.226840247035355], ["created_at", "2019-08-11 10:54:28.996612"], ["updated_at", "2019-08-11 10:54:28.996612"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (10.5ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (2.6ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.709502986900096], ["created_at", "2019-08-11 10:54:29.868936"], ["updated_at", "2019-08-11 10:54:29.868936"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (0.8ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 3202ms (Views: 1328.9ms | ActiveRecord: 65.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 13:54:43 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (1.0ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.233168839295725], ["created_at", "2019-08-11 10:54:44.074749"], ["updated_at", "2019-08-11 10:54:44.074749"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (4.6ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (3.6ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.709864789037944], ["created_at", "2019-08-11 10:54:44.773607"], ["updated_at", "2019-08-11 10:54:44.773607"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (0.9ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 1591ms (Views: 211.2ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 13:54:49 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (1.6ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.239150823240497], ["created_at", "2019-08-11 10:54:50.052886"], ["updated_at", "2019-08-11 10:54:50.052886"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (2.3ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (13.6ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.701629930201662], ["created_at", "2019-08-11 10:54:50.723651"], ["updated_at", "2019-08-11 10:54:50.723651"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (2.3ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1435ms (Views: 66.4ms | ActiveRecord: 35.8ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 13:54:57 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (1.2ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.232819136316937], ["created_at", "2019-08-11 10:54:57.828183"], ["updated_at", "2019-08-11 10:54:57.828183"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (2.0ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (0.9ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.703127177262802], ["created_at", "2019-08-11 10:54:58.572618"], ["updated_at", "2019-08-11 10:54:58.572618"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (9.9ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 1700ms (Views: 83.8ms | ActiveRecord: 54.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 13:55:06 +0300
+Processing by EtclassicsController#index as HTML
+Started GET "/" for ::1 at 2019-08-11 13:55:41 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (6.4ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.241270144037212], ["created_at", "2019-08-11 10:55:44.959621"], ["updated_at", "2019-08-11 10:55:44.959621"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (1.1ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (2.6ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.71037791170141], ["created_at", "2019-08-11 10:55:45.664419"], ["updated_at", "2019-08-11 10:55:45.664419"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (3.1ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 3838ms (Views: 125.6ms | ActiveRecord: 47.7ms)
+
+
+Completed 500 Internal Server Error in 60013ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/etclassics_controller.rb:5:in `index'
+Started GET "/" for ::1 at 2019-08-11 13:57:48 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (4.1ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.189006271909063], ["created_at", "2019-08-11 10:57:49.132273"], ["updated_at", "2019-08-11 10:57:49.132273"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (30.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (1.1ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (4.4ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.69657443813102], ["created_at", "2019-08-11 10:57:49.804246"], ["updated_at", "2019-08-11 10:57:49.804246"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (1.9ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 1831ms (Views: 148.9ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 13:59:10 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (3.8ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.212850755043918], ["created_at", "2019-08-11 10:59:26.616570"], ["updated_at", "2019-08-11 10:59:26.616570"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (3.8ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (3.6ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.657446476917992], ["created_at", "2019-08-11 10:59:27.365932"], ["updated_at", "2019-08-11 10:59:27.365932"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (15.2ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 17503ms (Views: 152.4ms | ActiveRecord: 68.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 14:01:53 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (11.3ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.141523473705945], ["created_at", "2019-08-11 11:01:54.772813"], ["updated_at", "2019-08-11 11:01:54.772813"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (1.2ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (0.9ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.715831502456684], ["created_at", "2019-08-11 11:01:55.486148"], ["updated_at", "2019-08-11 11:01:55.486148"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (2.8ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 1824ms (Views: 157.8ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 14:02:44 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (3.2ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.155489240966842], ["created_at", "2019-08-11 11:02:44.993720"], ["updated_at", "2019-08-11 11:02:44.993720"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (4.4ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (7.6ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.739591525402325], ["created_at", "2019-08-11 11:02:45.712409"], ["updated_at", "2019-08-11 11:02:45.712409"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (6.1ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 1719ms (Views: 230.2ms | ActiveRecord: 47.9ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 14:03:27 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (3.9ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.171569980507611], ["created_at", "2019-08-11 11:03:27.728129"], ["updated_at", "2019-08-11 11:03:27.728129"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (0.9ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (1.1ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.725699304944339], ["created_at", "2019-08-11 11:03:28.626721"], ["updated_at", "2019-08-11 11:03:28.626721"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (0.8ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 1918ms (Views: 283.3ms | ActiveRecord: 37.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 14:03:42 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (1.9ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.175415737288311], ["created_at", "2019-08-11 11:03:43.576850"], ["updated_at", "2019-08-11 11:03:43.576850"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (5.1ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (2.8ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.74875412459435], ["created_at", "2019-08-11 11:03:44.336166"], ["updated_at", "2019-08-11 11:03:44.336166"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (0.8ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 2133ms (Views: 233.0ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-11 14:03:57 +0300
+Processing by EtclassicsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Create (2.0ms)[0m  [1m[32mINSERT INTO "etclassics" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 12.177516033258174], ["created_at", "2019-08-11 11:03:58.076397"], ["updated_at", "2019-08-11 11:03:58.076397"]]
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:18
+  [1m[36mEtclassic Load (0.7ms)[0m  [1m[34mSELECT "etclassics".* FROM "etclassics"[0m
+  ↳ app/controllers/etclassics_controller.rb:21
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Create (4.8ms)[0m  [1m[32mINSERT INTO "eths" ("profit", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["profit", 15.745756788319033], ["created_at", "2019-08-11 11:03:58.754250"], ["updated_at", "2019-08-11 11:03:58.754250"]]
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/etclassics_controller.rb:36
+  [1m[36mEth Load (7.3ms)[0m  [1m[34mSELECT "eths".* FROM "eths"[0m
+  ↳ app/controllers/etclassics_controller.rb:39
+  Rendering etclassics/index.html.erb within layouts/application
+  Rendered etclassics/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 1539ms (Views: 148.9ms | ActiveRecord: 32.5ms)
+
+
